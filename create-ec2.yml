@@ -1,0 +1,13 @@
+---
+ - hosts: localhost
+   connection: local
+   gather_facts: False
+   tasks: 
+    - name: Simple case of “make plan and deploy if changes exist”
+      terraform:
+        force_init: true
+        project_path: "terraform/"
+      register: created_ec2_to_terraform
+    - name: Debug
+      debug: 
+         msg: "{{ created_ec2_to_terraform }}"
