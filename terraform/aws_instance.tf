@@ -1,13 +1,12 @@
 resource "aws_instance" "terraform-test" {
-  ami = "ami-066b76d09a3d3ff4e"
+  ami = "ami-0f27d081df46f326c"
   instance_type = "t2.micro"
-  key_name = "asgard-test-ec2-ssh-key"
+  key_name = "devos-bastion-key"
   vpc_security_group_ids = [
-    "sg-0acbda0211358279c",
-    "sg-0ef64a541fac662f4"
+    "sg-0450393f4cf62361c"
   ]
-  subnet_id="subnet-026cbdf685ee58384"
+  subnet_id="subnet-09be00293d7e87e26"
   tags = {
-    Name = "create-ec2-test-by-jiseon"
+    Name = "Terraform-Demo"
   }
 }
