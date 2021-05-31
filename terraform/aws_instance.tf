@@ -5,7 +5,7 @@ resource "aws_instance" "terraform-test" {
   vpc_security_group_ids = [
     "sg-0450393f4cf62361c"
   ]
-  subnet_id="subnet-09be00293d7e87e26"
+  subnet_id="subnet-036342616cae3b89f"
   tags = {
     Name = "Terraform-Demo"
   }
